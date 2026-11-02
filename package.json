@@ -1,0 +1,24 @@
+{
+  "name": "metric-thread-calc",
+  "version": "1.0.0",
+  "description": "Offline ISO metric thread calculator",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "metric-thread": "dist/cli.js"
+  },
+  "exports": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node --disable-warning=ExperimentalWarning scripts/build.js",
+    "prepare": "npm run build",
+    "test": "npm run build && node --test --test-isolation=none test/*.test.js"
+  }
+}
